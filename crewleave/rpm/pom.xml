@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+        <artifactId>crewleave</artifactId>
+        <groupId>com.jeppesen.jcms.crewleavemodule</groupId>
+        <version>1.0.0</version>
+    </parent>
+	<modelVersion>4.0.0</modelVersion>
+	
+	<artifactId>rpm-package</artifactId>	
+	<name>Maven Recipe: RPM Package</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>rpm-maven-plugin</artifactId>
+				<version>2.0.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>rpm</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<copyright>2018</copyright>
+					<group>Development</group>
+					<description>Maven Recipe: RPM Package.</description>
+					<mappings>						
+						<mapping>
+							<directory>${crewleave.home}/jar</directory>
+							<sources>
+								<source>
+									<location>../${project.basedir}/target/*.jar</app.properties</location>
+									<destination>crewleave.jar</destination>
+								</source>
+							</sources>
+						</mapping>
+						
+					</mappings>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<properties>
+		<app.home>/opt/jeppesen/jmcs</app.home>
+	</properties>
+
+</project>
