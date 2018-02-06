@@ -7,7 +7,7 @@
     </parent>
 	<modelVersion>4.0.0</modelVersion>
 	
-	<artifactId>rpm-package</artifactId>	
+	<artifactId>rpm</artifactId>	
 	<name>Maven Recipe: RPM Package</name>
 	<build>
 		<plugins>

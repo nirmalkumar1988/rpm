@@ -19,7 +19,7 @@
     <modules>
         <module>ui</module>
         <module>appgateway</module>
-        <module>rpm-package</module>
+        <module>rpm</module>
     </modules>
 
     <properties>
