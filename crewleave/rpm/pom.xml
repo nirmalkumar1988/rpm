@@ -31,7 +31,7 @@
 							<directory>${crewleave.home}/jar</directory>
 							<sources>
 								<source>
-									<location>../${project.basedir}/target/*.jar</location>
+									<location>../${project.basedir}/appgateway/target/*.jar</location>
 									<destination>crewleave.jar</destination>
 								</source>
 							</sources>
